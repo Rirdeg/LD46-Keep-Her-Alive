@@ -1,0 +1,96 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Fonts/Theme.theme" type="Theme" id=1]
+[ext_resource path="res://Fonts/default_font.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Main Menu/MainMenu.gd" type="Script" id=3]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+margin_left = 72.0
+margin_top = 26.0
+margin_right = 184.0
+margin_bottom = 124.0
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
+margin_right = 112.0
+margin_bottom = 17.0
+text = "Keep Her Alive"
+
+[node name="PlayButton" type="Button" parent="CenterContainer/VBoxContainer"]
+margin_top = 21.0
+margin_right = 112.0
+margin_bottom = 44.0
+text = "Play Game"
+
+[node name="InstButton" type="Button" parent="CenterContainer/VBoxContainer"]
+margin_top = 48.0
+margin_right = 112.0
+margin_bottom = 71.0
+text = "Instructions"
+
+[node name="QuitButton" type="Button" parent="CenterContainer/VBoxContainer"]
+margin_top = 75.0
+margin_right = 112.0
+margin_bottom = 98.0
+text = "Quit Game"
+
+[node name="Panel" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="CenterContainer" type="CenterContainer" parent="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/CenterContainer"]
+margin_left = 15.0
+margin_top = 11.0
+margin_right = 240.0
+margin_bottom = 138.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/CenterContainer/VBoxContainer"]
+margin_right = 225.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 225, 100 )
+custom_fonts/normal_font = ExtResource( 2 )
+text = "You're wife is sick, look after her needs to stop her from perishing,
+Journey out to the shopto get supplies and don't forget to collect gold on the way!
+The game lasts 5 days
+WASD controls your character, the sword follows your mouse, left click to attack
+
+Created for Ludum Dare 46
+Game created by Dan Lee (Rirdeg)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Panel/CenterContainer/VBoxContainer"]
+margin_top = 104.0
+margin_right = 225.0
+margin_bottom = 127.0
+text = "Back to Menu"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="CenterContainer/VBoxContainer/PlayButton" to="." method="_on_PlayButton_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/InstButton" to="." method="_on_InstButton_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/QuitButton" to="." method="_on_QuitButton_pressed"]
+[connection signal="pressed" from="Panel/CenterContainer/VBoxContainer/Button" to="." method="_on_Button_pressed"]

@@ -1,0 +1,44 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Assetts/full_block_water.png" type="Texture" id=1]
+[ext_resource path="res://Assetts/floating_right.png" type="Texture" id=2]
+[ext_resource path="res://Assetts/full_block.png" type="Texture" id=3]
+[ext_resource path="res://Assetts/grass.png" type="Texture" id=4]
+[ext_resource path="res://Assetts/rock.png" type="Texture" id=5]
+[ext_resource path="res://Assetts/floating.png" type="Texture" id=6]
+[ext_resource path="res://Assetts/floating_left.png" type="Texture" id=7]
+[ext_resource path="res://Assetts/hill.png" type="Texture" id=8]
+[ext_resource path="res://Assetts/rock_side.png" type="Texture" id=9]
+[ext_resource path="res://Assetts/bed.png" type="Texture" id=10]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Floating" type="Sprite" parent="."]
+texture = ExtResource( 6 )
+
+[node name="floating_left" type="Sprite" parent="."]
+texture = ExtResource( 7 )
+
+[node name="floating_right" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="full_block" type="Sprite" parent="."]
+texture = ExtResource( 3 )
+
+[node name="full_block_water" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+
+[node name="grass" type="Sprite" parent="."]
+texture = ExtResource( 4 )
+
+[node name="hill" type="Sprite" parent="."]
+texture = ExtResource( 8 )
+
+[node name="rock" type="Sprite" parent="."]
+texture = ExtResource( 5 )
+
+[node name="rock_side" type="Sprite" parent="."]
+texture = ExtResource( 9 )
+
+[node name="bed" type="Sprite" parent="."]
+texture = ExtResource( 10 )

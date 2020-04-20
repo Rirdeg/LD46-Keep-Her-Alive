@@ -1,0 +1,34 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://tilemap/tileset_new.tres" type="TileSet" id=1]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Levels/LevelManager.gd" type="Script" id=6]
+
+[node name="Node2D" type="Node2D" groups=[
+"levelmanager",
+]]
+script = ExtResource( 6 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 65538, 536870917, 0, 65540, 5, 0, 65544, 5, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 2, 0, 131079, 1, 0, 131080, 2, 0, 262148, 5, 0, 262150, 5, 0, 262153, 9, 0, 262155, 6, 0, 262156, 6, 0, 327681, 3, 0, 327682, 3, 0, 327683, 3, 0, 327684, 3, 0, 327685, 3, 0, 327686, 3, 0, 327687, 3, 0, 327688, 3, 0, 327689, 3, 0, 327690, 3, 0, 327691, 3, 0, 327692, 7, 0, 393223, 8, 0, 393224, 7, 0, 393225, 7, 0, 393226, 7, 0, 393227, 7, 0, 393228, 536870920, 0 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 34.4147, 17.9243 )
+
+[node name="Coins" type="Node2D" parent="."]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Enemies" type="Node2D" parent="."]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Clutter" type="Node2D" parent="."]
+__meta__ = {
+"_edit_lock_": true
+}
