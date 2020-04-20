@@ -94,16 +94,22 @@ func reset_game():
 
 
 func hp_upgrade():
-	player_hp = player_hp + 1
-	hp_upg_cost = hp_upg_cost + 10
+	if gold >= hp_upg_cost:
+		gold = gold - hp_upg_cost
+		hp_upg_cost = hp_upg_cost + 10
+		player_hp = player_hp + 1
 
 func atk_upgrade():
-	attack_damage = attack_damage + 1
-	atk_upg_cost = atk_upg_cost + 10
+	if gold >= atk_upg_cost:
+		gold = gold - atk_upg_cost
+		atk_upg_cost = atk_upg_cost + 10
+		attack_damage = attack_damage + 1
 
 func swd_upgrade():
-	sword = sword + 0.1
-	swd_upg_cost = swd_upg_cost + 10
+	if gold >= swd_upg_cost:
+		gold = gold - swd_upg_cost
+		swd_upg_cost = swd_upg_cost + 10
+		sword = sword + 0.1
 
 
 func load_home_scene():
